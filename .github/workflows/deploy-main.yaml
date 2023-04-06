@@ -55,6 +55,7 @@ jobs:
             git pull origin main &&
             ls
             sudo docker-compose up
+          END
           '
 
     # name: Build Docker container image
