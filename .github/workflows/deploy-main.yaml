@@ -52,7 +52,7 @@ jobs:
             git fetch --all &&
             git reset --hard origin/main &&
             git pull origin main &&
-            docker run -p 127.0.0.1:3000:3000 docker.io/raghavendiran2002/cicd:main
+            sudo docker run -p 127.0.0.1:3000:3000 docker.io/raghavendiran2002/cicd:main
           '
 
     # name: Build Docker container image
