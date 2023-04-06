@@ -48,6 +48,7 @@ jobs:
 
             #Now we have got the access of EC2 and we will start the deploy .
             sudo su &&
+            git clone git@github.com:Raghavendiran-2002/cicd-aws-docker
             cd /home/ubuntu/cicd-aws-docker/ &&
             git checkout main &&
             git fetch --all &&
