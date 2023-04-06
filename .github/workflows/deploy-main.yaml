@@ -47,12 +47,13 @@ jobs:
           ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOSTNAME} '
 
             #Now we have got the access of EC2 and we will start the deploy .
+            sudo su &&
             cd /home/ubuntu/cicd-aws-docker/ &&
             git checkout main &&
             git fetch --all &&
             git reset --hard origin/main &&
             git pull origin main &&
-            sudo docker run -p 127.0.0.1:3000:3000 docker.io/raghavendiran2002/cicd:main
+            docker run -p 127.0.0.1:3000:3000 docker.io/raghavendiran2002/cicd:main
           '
 
     # name: Build Docker container image
