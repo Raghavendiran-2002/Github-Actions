@@ -3,7 +3,7 @@
         # docker run -p 127.0.0.1:3000:3000 docker.io/raghavendiran2002/cicd:main
 name: Dockerize Node.js Application
 on: push
-  branches: [ master ]
+  branches: [ main ]
 jobs:
   build-container:
     name: Push Docker image to Docker Hub
