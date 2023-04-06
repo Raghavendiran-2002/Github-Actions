@@ -54,8 +54,7 @@ jobs:
             git fetch --all &&
             git reset --hard origin/main &&
             git pull origin main &&
-            sudo npm i &&
-            sudo docker-compose up &&
+            sudo docker-compose down &&
             sudo docker-compose up 
           '
 
