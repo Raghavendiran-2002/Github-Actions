@@ -53,9 +53,9 @@ jobs:
             git fetch --all &&
             git reset --hard origin/main &&
             git pull origin main &&
-            ls &&
+            sudo npm i &&
             sudo docker-compose up &&
-          END
+            sudo docker-compose up 
           '
 
     # name: Build Docker container image
