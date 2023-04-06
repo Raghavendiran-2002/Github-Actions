@@ -1,3 +1,6 @@
+# TO RUN DOCKER IMAGE LOCALLY
+        # docker pull raghavendiran2002/cicd:main
+        # docker run -p 127.0.0.1:3000:3000 docker.io/raghavendiran2002/cicd:main
 name: Dockerize Node.js Application
 on: push
 jobs:
@@ -27,6 +30,8 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+
+
 
     # name: Build Docker container image
     # runs-on: ubuntu-latest
