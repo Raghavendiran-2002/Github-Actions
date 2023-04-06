@@ -1,11 +1,10 @@
-FROM node:18.15.0
+FROM node:18-alpine
+ENV PORT=3000
 
-WORKDIR /usr/src/app
-
-COPY package*.json ./
-
+WORKDIR app
+COPY . .
+COPY package.json .
 RUN npm install
 
-COPY . .
-
-CMD ["node", "app.js"]
+EXPOSE $PORT
+CMD npm run start
