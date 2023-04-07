@@ -58,7 +58,7 @@ jobs:
             git reset --hard origin/main &&
             git pull origin main &&
             sudo docker system prune -a -f &&
-            sudo docker-compose up 
+            sudo docker-compose up -d
           '
 
     # name: Build Docker container image
