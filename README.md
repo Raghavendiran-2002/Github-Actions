@@ -104,8 +104,8 @@ jobs:
             git fetch --all &&
             git reset --hard origin/main &&
             git pull origin main &&
-            sudo docker system prune -a -f &&
-            sudo docker-compose up
+            sudo docker-compose build &&
+            sudo docker-compose up -d --force-recreate
           '
 
 ```
